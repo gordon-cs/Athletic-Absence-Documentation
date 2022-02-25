@@ -1,7 +1,5 @@
 # Purpose
 
-## Test
-
 Our customer wants to find a way to use technology to let professors know when student athletes are missing class and help the student athletes stay up to date on their work when they are at a competition. Student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. Our customer's idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process on Gordon 360 by including the course schedule and athletics event schedule and alerting the professors for when they miss class.
 
 # Problem Statement
