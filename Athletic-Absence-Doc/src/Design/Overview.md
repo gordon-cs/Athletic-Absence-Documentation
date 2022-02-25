@@ -3,4 +3,4 @@
 ### In this section:
 
 - [System Overview](./System.md)
-- [Detailed Design](./Detailed.md)
+- [Database](./Database.md)
