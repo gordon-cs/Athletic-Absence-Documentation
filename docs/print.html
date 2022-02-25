@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Purpose.html">Purpose</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="Building/Building.html"><strong aria-hidden="true">1.</strong> Building From Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Building/Frontend.html"><strong aria-hidden="true">1.1.</strong> Frontend</a></li><li class="chapter-item expanded "><a href="Building/Backend.html"><strong aria-hidden="true">1.2.</strong> Backend</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Design</li><li class="chapter-item expanded "><a href="Design/Overview.html"><strong aria-hidden="true">2.</strong> Design Overview</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Design/System.html"><strong aria-hidden="true">2.1.</strong> System</a></li><li class="chapter-item expanded "><a href="Design/Database.html"><strong aria-hidden="true">2.2.</strong> Database</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Purpose.html">Purpose</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="Building/Building.html"><strong aria-hidden="true">1.</strong> Building From Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Building/Frontend.html"><strong aria-hidden="true">1.1.</strong> Frontend</a></li><li class="chapter-item expanded "><a href="Building/Backend.html"><strong aria-hidden="true">1.2.</strong> Backend</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Design</li><li class="chapter-item expanded "><a href="Design/System.html"><strong aria-hidden="true">2.</strong> System</a></li><li class="chapter-item expanded "><a href="Design/Database.html"><strong aria-hidden="true">3.</strong> Database</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,19 +149,8 @@
 <p>Gordon College Athletics is the athletics program at Gordon College which consists of a large variety of sports. Our customer is excited about working with us on this project. He can keep this project running when we are gone. He may not have the programming skills himself to maintain the project but he has a small budget sufficient enough to pay someone. Other computer science students and CTS work on Gordon 360. The athletics program will be helped significantly if this project succeeds. It will be much easier for athletes to be up to date on their work and for professors to know that they are missing class. However, the athletics department will still be fine if the project fails since the students do have a paper form that they fill out which lets the professor know that they are missing a class.</p>
 <p>The Gordon College Athletics department would like there to be a simpler way to let the professor know that a student is missing class due to an athletic event. Currently, the students have a paper form that they fill out that they have to have the coach sign and they need to deliver this form to the professor. They then have to go to the professor and clarify expectations for the days of class that they are going to miss. The problem with this process is that a mistake might be made, such as the coach not signing the form or the student not clarifying expectations with the professor. This can lead to a student-athlete falling behind in class due to missing class for an athletic competition. our customer’s idea is to use Gordon 360 to have the class schedule and a student’s athletic events schedule and alert a professor if a student misses their class due to an athletic event. our customer thinks that this should send an alert to the professor early on in the semester and 7 days out or 48 hours before the missed class so that the student and the professor could have a conversation about expectations for the class they missed. We know student-athletes, coaches, and professors who would use this product. We are almost certain that we will be able to complete the ideas that our customer wants for this project, probably this semester. There may be additional features that we might want to add to this that have not been thought of yet. We may be able to add some of these features to this project by the time we are finished with the project but there may be some that will not be added until after we graduate.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="building-from-source"><a class="header" href="#building-from-source">Building From Source</a></h1>
-<h3 id="in-this-section"><a class="header" href="#in-this-section">In this section:</a></h3>
-<ul>
-<li><a href="Building/./Frontend.html">Building the frontend</a></li>
-<li><a href="Building/./Backend.html">Building the backend</a></li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frontend"><a class="header" href="#frontend">Frontend</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="backend"><a class="header" href="#backend">Backend</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="design-overview"><a class="header" href="#design-overview">Design Overview</a></h1>
-<h3 id="in-this-section-1"><a class="header" href="#in-this-section-1">In this section:</a></h3>
-<ul>
-<li><a href="Design/./System.html">System Overview</a></li>
-<li><a href="Design/./Database.html">Database</a></li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="system-overview"><a class="header" href="#system-overview">System Overview</a></h1>
 <p>Prior to the launch of our system, student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. There are also issues where games get canceled, but students skip classes anyways. Carter Shaw’s idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process with our system, maybe using Gordon360 in some way, by including the course schedule and athletics event schedule and alerting the professors for when they will have students missing class. Read more about our problem statement here.
 The primary features of this application include: allowing the person scheduling transport to give that data to a database, providing a 'handshake' system so the software can tell if a student has been approved to miss class by their professor, and allowing this information to be available to coaches, professors, and student-athletes via email and through our UI. Here’s our standard workflow:</p>
@@ -176,11 +165,11 @@ The primary features of this application include: allowing the person scheduling
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="database"><a class="header" href="#database">Database</a></h1>
 <table><thead><tr><th>Database</th><th>Table</th><th>Content</th></tr></thead><tbody>
-<tr><td>WS_GCore</td><td>AthleticEvent</td><td>This table contains all athletic events</td></tr>
-<tr><td>WS_GCore</td><td>InEvent</td><td>This table contains a pairing of team ids and event ids</td></tr>
-<tr><td>WS_GCore</td><td>InTeam</td><td>This table contains a pairing of student ids and teams</td></tr>
-<tr><td>WS_GCore</td><td>AthleticAbsence.Teams</td><td>This table contains all athletic teams.</td></tr>
-<tr><td>WS_GCore</td><td>View: AthleticAbsence.Conflict</td><td>This view maps students who have class conflicts.</td></tr>
+<tr><td>WS_GCore</td><td>AthleticEvent</td><td>Contains all athletic events</td></tr>
+<tr><td>WS_GCore</td><td>InEvent</td><td>Contains a pairing of team and event ids</td></tr>
+<tr><td>WS_GCore</td><td>InTeam</td><td>Contains a pairing of student ids and teams</td></tr>
+<tr><td>WS_GCore</td><td>AthleticAbsence.Teams</td><td>Contains all athletic teams.</td></tr>
+<tr><td>WS_GCore</td><td>View: AthleticAbsence.Conflict</td><td>Maps students who have class conflicts.</td></tr>
 <tr><td>webSQL</td><td>dbo.account</td><td>Student account info</td></tr>
 </tbody></table>
 
