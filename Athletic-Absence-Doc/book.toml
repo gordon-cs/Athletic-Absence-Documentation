@@ -1,0 +1,6 @@
+[book]
+authors = ["Hudson Finn", "Aidan Perez", "Josiah Kangas", "Jacob Christopher"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Athletic Absence Documentation"
