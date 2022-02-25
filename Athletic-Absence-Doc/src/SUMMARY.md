@@ -5,11 +5,10 @@
 # User Guide
 
 - [Building From Source](Building/Building.md)
-  - [Frontend](Building/Frontend.md)
-  - [Backend](Building/Backend.md)
+     - [Frontend](Building/Frontend.md)
+     - [Backend](Building/Backend.md)
 
 # Design
 
-- [Design Overview](Design/Overview.md)
-  - [System](Design/System.md)
-  - [Database](Design/Database.md)
+- [System](Design/System.md)
+- [Database](Design/Database.md)
