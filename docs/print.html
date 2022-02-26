@@ -151,6 +151,63 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="building-from-source"><a class="header" href="#building-from-source">Building From Source</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frontend"><a class="header" href="#frontend">Frontend</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="backend"><a class="header" href="#backend">Backend</a></h1>
+<h2 id="starting-the-backend"><a class="header" href="#starting-the-backend">Starting the backend</a></h2>
+<ul>
+<li>Connect to the development VM (Work in progress)</li>
+<li>Clone https://github.com/gordon-cs/athletic-form </li>
+<li>Go to: <code>athletic-form =&gt; API</code></li>
+<li>Open <code>AthleticFormAPI.sln</code> in Visual Studio 2019</li>
+</ul>
+<h2 id="backend-with-local-non-gordon-database-vs-code"><a class="header" href="#backend-with-local-non-gordon-database-vs-code">Backend with local non-Gordon Database (VS Code)</a></h2>
+<ul>
+<li>
+<p>First, make sure you have docker-compose installed on your system (follow instructions <a href="https://docs.docker.com/compose/install/">here</a> (make sure to select the correct operating system)</p>
+</li>
+<li>
+<p><code>cd clone-path/API/api-core/AthleticFormCore/AthleticSQLServer/ServerConfiguration</code></p>
+</li>
+<li>
+<p>replace SA_PASSWORD with a password of your choosing (Make sure to use special characters and at least one number)</p>
+</li>
+<li>
+<p>Make sure docker is running.  If on docker desktop, make sure you are logged in with your docker account</p>
+</li>
+<li>
+<p><code>sudo docker-compose up</code></p>
+</li>
+<li>
+<p>in Azure Data Studio, add a new connection</p>
+</li>
+<li>
+<p>Server: localhost, username: SA, Password: Password as specified in the docker-compose.yml file</p>
+</li>
+<li>
+<p>Once you are connected, open and run the three queries that are included, first the DatabaseCreation.sql, then the CreateTable.SQL and then the InsertData.SQL query</p>
+</li>
+<li>
+<p>Be sure to leave the server running to connect with the backend in the next step</p>
+</li>
+<li>
+<p>We have since migrated to .NET Core, thus the API can now be run on any OS.</p>
+</li>
+<li>
+<p>Steps are exactly the same as above, however instead of opening the solution in Visual Studo, open one of the two projects in VS code:</p>
+<ul>
+<li>Be sure to have the C# extention (Microsoft) installed</li>
+<li>Specify the project to load (follow instructions <a href="https://code.visualstudio.com/docs/languages/csharp">here</a>, in particular, the section starting with <code>Roslyn and OmniSharp</code>)</li>
+<li>Make sure you have the secrets.json in your <code>~/.microsoft/usersecrets/&lt;user_secrets_id&gt;/secrets.json</code> folder on Unix-like operating systems, and for Windows, <code>%APPDATA%\Microsoft\UserSecrets\&lt;user_secrets_id&gt;\secrets.json</code>  (for the &lt;user_secrets_id&gt;, check the <UserSecretsId> field in AthleticFormCore.csproj file)</li>
+<li>In secrets.json, add</li>
+</ul>
+<pre><code>{
+    &quot;ConnectionString&quot;: &quot;Server=localhost; Database=AthleticDatabase;User Id=sa; Password=your_password 
+} 
+</code></pre>
+<ul>
+<li><code>cd repoPath/API/api-core/AthleticFormCore</code> </li>
+<li><code>dotnet run</code></li>
+</ul>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="system-overview"><a class="header" href="#system-overview">System Overview</a></h1>
 <p>Prior to the launch of our system, student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. There are also issues where games get canceled, but students skip classes anyways. Carter Shaw’s idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process with our system, maybe using Gordon360 in some way, by including the course schedule and athletics event schedule and alerting the professors for when they will have students missing class. Read more about our problem statement here.
 The primary features of this application include: allowing the person scheduling transport to give that data to a database, providing a 'handshake' system so the software can tell if a student has been approved to miss class by their professor, and allowing this information to be available to coaches, professors, and student-athletes via email and through our UI. Here’s our standard workflow:</p>
