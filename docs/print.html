@@ -5,7 +5,10 @@
         <meta charset="UTF-8">
         <title>Athletic Absence Documentation</title>
         <meta name="robots" content="noindex" />
+
+
         <!-- Custom HTML head -->
+        
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,15 +20,18 @@
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
         <link rel="stylesheet" href="css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -84,7 +90,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -111,6 +117,7 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -124,6 +131,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -296,124 +304,135 @@ The primary features of this application include: allowing the person scheduling
 <li>ConflictsController.cs: controller for conflicts information</li>
 <li>EmailController.cs: controller with code for displaying email information and sending emails</li>
 <li>EventsController.cs: controller for reading, adding, deleting, and restoring events</li>
-<li>ReportsController.cs: controller for reading report sent to professors
-AthleticFormCore.csproj: project file for AthleticFormCore project
-Program.cs: actual program that is run
-Startup.cs: code for starting up project
-AthleticFormLibrary: contains code for AthleticFormLibrary project
-DataAccess: contains code that allows you to access database
-AthleticContext.cs: allows project to access database
-Emailer: contains code for sending emails
-EmailClient.cs: code for sending emails.  In SendMail to send an email replace first.last@gordon.edu with your email and password with your password to send an email from your account.  Eventually, we will replace this with the Athletics account but we will not commit the Athletics account username and password to GitHub.
-Interfaces: interfaces that some of our classes inherit from
-IEmailer.cs: interface that EmailClient.cs inherits from
-IReportGeneration.cs: interface that ReportGenerator.cs inherits from
-IScheduler.cs: interface that EmailScheduler.cs inherits from
-Models: classes for different tables/views in database
-Account.cs: stores data for account information
-AthleticConflict.cs: stores data about athletic conflicts
-AthleticEvent.cs: stores data about athletic events
-PlayersInEvent.cs: stores data about which players are in which events
-PlayersInTeam.cs: stores data about which players are on which team
-SectionMaster.cs: contains course information
-StudentsEnrolledIn.cs: contains information about which students are enrolled in which courses
-Team.cs: contains information about teams
-Static Pages
-ReportFormat.html: static html page that serves as a mockup for the report that is sent to the professor
-Utilities: files that perform some of the major tasks including generating reports and scheduling times for sending emails
-Scheduler: contains code for scheduling emails
-EmailScheduler.cs: contains code for scheduling when to send emails.  Our reports are sent to the professors every Sunday at 6 AM.
-ReportGenerator.cs: contains code for generating reports sent to professors
-AthleticFormLibrary.csproj: project file for AthleticFormLibrary project
-Injector.cs: registers classes that inherit from interfaces so that these classes can inherit from them
-Tests: contains unit tests, which are pytests written in Python to test API
-pytest_components.py: contains code for getting and posting a request through Python
-test_accounts.py: testing the ability to get account and student enrolled in information
-test_athleticForm_pytest.py: constants that are used throughout the test project.  Currently only contains the host url but may contain more later on.
-test_emails.py: tests ability to send emails
-test_events.py:  tests ability to get all events
-test_reports.py: tests to see that report is generating correct information
-AthleticFormSolution.sln: runnable solution file
-athletic-form-ui: contains code for UI, written in React.js
-public: contains favicon.ico and index.html
-favicon.ico: Gordon Athletics logo.  Our main logo for the project
-index.html: html page that renders react component. 
-src: contains source code for project
-Components: contains components that are commonly used throughout the project
-CoachEventCard.tsx: cards on coach’s events page
-DeletedEventCard.tsx: cards on deleted events page
-EventCard.tsx: cards on Robyn’s events page
-EventDetailsBase.tsx: component that is shared between Robyn’s details page and the coach’s details page
-Helpers: contains TypeScript files with functions that are commonly used as helper functions throughout the project
-DateTimeHelpers.ts: these functions make it so that the date and time are easy for people to read and a function converting military time to standard time.
-FilterHelpers.tsx: these functions help with sorting and filtering events
-Services: do controller requests in React project and connect backend to frontend
-AxiosService.ts: fetches the base backend url
-EventService.ts:  contains functions that do controller actions in React project
-Views: different React pages
-AddEvent.tsx: page for adding events
-ClassConflicts.tsx: displays class conflicts for an athlete in an athletic event
-CoachEventDetails.tsx: displays event details for the coach.  Displays information about an athletic event, which students have conflicts and their approval status.
-CoachEventsPage.tsx: displays all non-deleted events for coaches. Displays event information for each event.  Red stripes on top for if the events have conflicts.  Also, displays the number of students with conflicts for each event.
-DeleteEvent.tsx: page for deleting an athletic event
-DeletedEventsPage.tsx: page that displays all deleted events.  These events can be recovered.
-EventDetails.tsx: displays event details for Robyn.  Simply displays data about events.
-EventsPage.tsx: displays all non-deleted events for Robyn.  Displays event information for each event.  Robyn also has the ability to add, edit, and delete events.
-RecoverEvent.tsx: page for recovering a deleted event.
-UpdateEvent.tsx: page for updating an event.
-styles: scss styling for React pages
-addEvent.scss: styling for AddEvent.tsx
-eventCard.scss: styling for EventCard.tsx and CoachEventCard.tsx
-eventsPage.scss: styling for EventsPage.tsx and CoachEventsPage.tsx
-App.tsx: renders React page
-index.tsx: renders App.tsx
-react-app-env-d.ts
-.editorconfig
-.prettierc.json
-package-lock.json: contains exact dependency tree for packages in athletic-form-ui directory
-package.json: similar to package-lock.json, contains information about packages in athletic-form-ui directory but not exact dependency tree
-tsconfig.json
-.gitignore: list of files for GitHub to ignore
-README.md:  contains documentation for project
-package-lock.json: contains exact dependency tree for packages in athletic-form directory
-package.json: similar to package-lock.json, contains information about packages in athletic-form directory but not exact dependency tree</li>
+<li>ReportsController.cs: controller for reading report sent to professors</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+<li>AthleticFormCore.csproj: project file for AthleticFormCore project</li>
+<li>Program.cs: actual program that is run</li>
+<li>Startup.cs: code for starting up project</li>
+<li>AthleticFormLibrary: contains code for AthleticFormLibrary project</li>
+<li>DataAccess: contains code that allows you to access database</li>
+<li>AthleticContext.cs: allows project to access database</li>
+<li>Emailer: contains code for sending emails</li>
+<li>EmailClient.cs: code for sending emails. In SendMail to send an email replace first.last@gordon.edu with your email and password with your password to send an email from your account. Eventually, we will replace this with the Athletics account but we will not commit the Athletics account username and password to GitHub.</li>
+<li>Interfaces: interfaces that some of our classes inherit from</li>
+<li>IEmailer.cs: interface that EmailClient.cs inherits from</li>
+<li>IReportGeneration.cs: interface that ReportGenerator.cs inherits from</li>
+<li>IScheduler.cs: interface that EmailScheduler.cs inherits from</li>
+<li>Models: classes for different tables/views in database</li>
+<li>Account.cs: stores data for account information</li>
+<li>AthleticConflict.cs: stores data about athletic conflicts</li>
+<li>AthleticEvent.cs: stores data about athletic events</li>
+<li>PlayersInEvent.cs: stores data about which players are in which events</li>
+<li>PlayersInTeam.cs: stores data about which players are on which team</li>
+<li>SectionMaster.cs: contains course information</li>
+<li>StudentsEnrolledIn.cs: contains information about which students are enrolled in which courses</li>
+<li>Team.cs: contains information about teams
+Static Pages</li>
+<li>ReportFormat.html: static html page that serves as a mockup for the report that is sent to the professor</li>
+<li>Utilities: files that perform some of the major tasks including generating reports and scheduling times for sending emails</li>
+<li>Scheduler: contains code for scheduling emails</li>
+<li>EmailScheduler.cs: contains code for scheduling when to send emails. Our reports are sent to the professors every Sunday at 6 AM.</li>
+<li>ReportGenerator.cs: contains code for generating reports sent to professors</li>
+<li>AthleticFormLibrary.csproj: project file for AthleticFormLibrary project</li>
+<li>Injector.cs: registers classes that inherit from interfaces so that these classes can inherit from them</li>
+<li>Tests: contains unit tests, which are pytests written in Python to test API</li>
+<li>pytest_components.py: contains code for getting and posting a request through Python</li>
+<li>test_accounts.py: testing the ability to get account and student enrolled in information</li>
+<li>test_athleticForm_pytest.py: constants that are used throughout the test project. Currently only contains the host url but may contain more later on.</li>
+<li>test_emails.py: tests ability to send emails</li>
+<li>test_events.py: tests ability to get all events</li>
+<li>test_reports.py: tests to see that report is generating correct information</li>
+<li>AthleticFormSolution.sln: runnable solution file</li>
+<li>athletic-form-ui: contains code for UI, written in React.js</li>
+<li>public: contains favicon.ico and index.html</li>
+<li>favicon.ico: Gordon Athletics logo. Our main logo for the project</li>
+<li>index.html: html page that renders react component.</li>
+<li>src: contains source code for project</li>
+<li>Components: contains components that are commonly used throughout the project</li>
+<li>CoachEventCard.tsx: cards on coach’s events page</li>
+<li>DeletedEventCard.tsx: cards on deleted events page</li>
+<li>EventCard.tsx: cards on Robyn’s events page</li>
+<li>EventDetailsBase.tsx: component that is shared between Robyn’s details page and the coach’s details page</li>
+<li>Helpers: contains TypeScript files with functions that are commonly used as helper functions throughout the project</li>
+<li>DateTimeHelpers.ts: these functions make it so that the date and time are easy for people to read and a function converting military time to standard time.</li>
+<li>FilterHelpers.tsx: these functions help with sorting and filtering events</li>
+<li>Services: do controller requests in React project and connect backend to frontend</li>
+<li>AxiosService.ts: fetches the base backend url</li>
+<li>EventService.ts: contains functions that do controller actions in React project</li>
+<li>Views: different React pages</li>
+<li>AddEvent.tsx: page for adding events</li>
+<li>ClassConflicts.tsx: displays class conflicts for an athlete in an athletic event</li>
+<li>CoachEventDetails.tsx: displays event details for the coach. Displays information about an athletic event, which students have conflicts and their approval status.</li>
+<li>CoachEventsPage.tsx: displays all non-deleted events for coaches. Displays event information for each event. Red stripes on top for if the events have conflicts. Also, displays the number of students with conflicts for each event.</li>
+<li>DeleteEvent.tsx: page for deleting an athletic event</li>
+<li>DeletedEventsPage.tsx: page that displays all deleted events. These events can be recovered.</li>
+<li>EventDetails.tsx: displays event details for Robyn. Simply displays data about events.</li>
+<li>EventsPage.tsx: displays all non-deleted events for Robyn. Displays event information for each event. Robyn also has the ability to add, edit, and delete events.</li>
+<li>RecoverEvent.tsx: page for recovering a deleted event.</li>
+<li>UpdateEvent.tsx: page for updating an event.</li>
+<li>styles: scss styling for React pages</li>
+<li>addEvent.scss: styling for AddEvent.tsx</li>
+<li>eventCard.scss: styling for EventCard.tsx and CoachEventCard.tsx</li>
+<li>eventsPage.scss: styling for EventsPage.tsx and CoachEventsPage.tsx</li>
+<li>App.tsx: renders React page</li>
+<li>index.tsx: renders App.tsx</li>
+<li>react-app-env-d.ts</li>
+<li>.editorconfig</li>
+<li>.prettierc.json</li>
+<li>package-lock.json: contains exact dependency tree for packages in athletic-form-ui directory</li>
+<li>package.json: similar to package-lock.json, contains information about packages in athletic-form-ui directory but not exact dependency tree</li>
+<li>tsconfig.json</li>
+<li>.gitignore: list of files for GitHub to ignore</li>
+<li>README.md: contains documentation for project</li>
+<li>package-lock.json: contains exact dependency tree for packages in athletic-form directory</li>
+<li>package.json: similar to package-lock.json, contains information about packages in athletic-form directory but not exact dependency tree</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
             </nav>
 
         </div>
 
+
+
+
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
+
+
         <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+
         <script type="text/javascript">
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
+
     </body>
 </html>
