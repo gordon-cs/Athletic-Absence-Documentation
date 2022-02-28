@@ -143,13 +143,30 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="backend"><a class="header" href="#backend">Backend</a></h1>
-<h2 id="starting-the-backend"><a class="header" href="#starting-the-backend">Starting the backend</a></h2>
+<h2 id="api-setup"><a class="header" href="#api-setup">API Setup</a></h2>
 <ul>
-<li>Connect to the development VM (Work in progress)</li>
-<li>Clone https://github.com/gordon-cs/athletic-form</li>
-<li>Go to: <code>athletic-form =&gt; API</code></li>
-<li>Open <code>AthleticFormAPI.sln</code> in Visual Studio 2019</li>
+<li>
+<p>Connect to the development VM</p>
+<ul>
+<li>Follow instructions <a href="https://cts.gordon.edu/knowledge/how-to-connect-to-a-remote-computer-from-a-non-gordon-managed-windows-computer/">here</a> to connect to it
+<ul>
+<li><code>server name: CS-Athletics</code></li>
+<li><code>domain: gordon.edu</code></li>
 </ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>git clone https://github.com/gordon-cs/athletic-form</code></p>
+</li>
+<li>
+<p><code>cd athletic-form/API</code></p>
+</li>
+<li>
+<p>Open <code>AthleticFormAPI.sln</code> in Visual Studio 2019</p>
+</li>
+</ul>
+<hr />
 <h2 id="backend-with-local-non-gordon-database-vs-code"><a class="header" href="#backend-with-local-non-gordon-database-vs-code">Backend with local non-Gordon Database (VS Code)</a></h2>
 <ul>
 <li>
@@ -188,13 +205,8 @@
 <li>Be sure to have the C# extention (Microsoft) installed</li>
 <li>Specify the project to load (follow instructions <a href="https://code.visualstudio.com/docs/languages/csharp">here</a>, in particular, the section starting with <code>Roslyn and OmniSharp</code>)</li>
 <li>Make sure you have the secrets.json in your <code>~/.microsoft/usersecrets/&lt;user_secrets_id&gt;/secrets.json</code> folder on Unix-like operating systems, and for Windows, <code>%APPDATA%\Microsoft\UserSecrets\&lt;user_secrets_id&gt;\secrets.json</code> (for the &lt;user_secrets_id&gt;, check the <UserSecretsId> field in AthleticFormCore.csproj file)</li>
-<li>In secrets.json, add</li>
-</ul>
-<pre><code>{
-  &quot;ConnectionString&quot;: &quot;Server=localhost; Database=AthleticDatabase;User Id=sa; Password=your_password
-}
-</code></pre>
-<ul>
+<li>In secrets.json, add
+<code>{ &quot;ConnectionString&quot;: &quot;Server=localhost; Database=AthleticDatabase;User Id=sa; Password=your_password }</code></li>
 <li><code>cd repoPath/API/api-core/AthleticFormCore</code></li>
 <li><code>dotnet run</code></li>
 </ul>
