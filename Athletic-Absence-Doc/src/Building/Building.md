@@ -2,6 +2,8 @@
 
 Although there is provided a method to run this project locally, the project is designed to be run on Gordon's servers.
 
+---
+
 ## Preliminary Setup
 
 (Work in progress)
