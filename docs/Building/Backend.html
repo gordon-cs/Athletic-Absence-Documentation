@@ -157,10 +157,10 @@
 </ul>
 </li>
 <li>
-<p>Clone https://github.com/gordon-cs/athletic-form</p>
+<p><code>git clone https://github.com/gordon-cs/athletic-form</code></p>
 </li>
 <li>
-<p>Go to: <code>athletic-form/API</code></p>
+<p><code>cd athletic-form/API</code></p>
 </li>
 <li>
 <p>Open <code>AthleticFormAPI.sln</code> in Visual Studio 2019</p>
@@ -205,13 +205,8 @@
 <li>Be sure to have the C# extention (Microsoft) installed</li>
 <li>Specify the project to load (follow instructions <a href="https://code.visualstudio.com/docs/languages/csharp">here</a>, in particular, the section starting with <code>Roslyn and OmniSharp</code>)</li>
 <li>Make sure you have the secrets.json in your <code>~/.microsoft/usersecrets/&lt;user_secrets_id&gt;/secrets.json</code> folder on Unix-like operating systems, and for Windows, <code>%APPDATA%\Microsoft\UserSecrets\&lt;user_secrets_id&gt;\secrets.json</code> (for the &lt;user_secrets_id&gt;, check the <UserSecretsId> field in AthleticFormCore.csproj file)</li>
-<li>In secrets.json, add</li>
-</ul>
-<pre><code>{
-  &quot;ConnectionString&quot;: &quot;Server=localhost; Database=AthleticDatabase;User Id=sa; Password=your_password
-}
-</code></pre>
-<ul>
+<li>In secrets.json, add
+<code>{ &quot;ConnectionString&quot;: &quot;Server=localhost; Database=AthleticDatabase;User Id=sa; Password=your_password }</code></li>
 <li><code>cd repoPath/API/api-core/AthleticFormCore</code></li>
 <li><code>dotnet run</code></li>
 </ul>
