@@ -21,42 +21,42 @@
       - EmailController.cs: controller with code for displaying email information and sending emails
       - EventsController.cs: controller for reading, adding, deleting, and restoring events
       - ReportsController.cs: controller for reading report sent to professors
-- AthleticFormCore.csproj: project file for AthleticFormCore project
-- Program.cs: actual program that is run
-- Startup.cs: code for starting up project
-- AthleticFormLibrary: contains code for AthleticFormLibrary project
-- DataAccess: contains code that allows you to access database
-- AthleticContext.cs: allows project to access database
-- Emailer: contains code for sending emails
-- EmailClient.cs: code for sending emails. In SendMail to send an email replace first.last@gordon.edu with your email and password with your password to send an email from your account. Eventually, we will replace this with the Athletics account but we will not commit the Athletics account username and password to GitHub.
-- Interfaces: interfaces that some of our classes inherit from
-- IEmailer.cs: interface that EmailClient.cs inherits from
-- IReportGeneration.cs: interface that ReportGenerator.cs inherits from
-- IScheduler.cs: interface that EmailScheduler.cs inherits from
-- Models: classes for different tables/views in database
-- Account.cs: stores data for account information
-- AthleticConflict.cs: stores data about athletic conflicts
-- AthleticEvent.cs: stores data about athletic events
-- PlayersInEvent.cs: stores data about which players are in which events
-- PlayersInTeam.cs: stores data about which players are on which team
-- SectionMaster.cs: contains course information
-- StudentsEnrolledIn.cs: contains information about which students are enrolled in which courses
-- Team.cs: contains information about teams
-  Static Pages
-- ReportFormat.html: static html page that serves as a mockup for the report that is sent to the professor
-- Utilities: files that perform some of the major tasks including generating reports and scheduling times for sending emails
-- Scheduler: contains code for scheduling emails
-- EmailScheduler.cs: contains code for scheduling when to send emails. Our reports are sent to the professors every Sunday at 6 AM.
-- ReportGenerator.cs: contains code for generating reports sent to professors
-- AthleticFormLibrary.csproj: project file for AthleticFormLibrary project
-- Injector.cs: registers classes that inherit from interfaces so that these classes can inherit from them
+    - AthleticFormCore.csproj: project file for AthleticFormCore project
+    - Program.cs: actual program that is run
+    - Startup.cs: code for starting up project
+  - AthleticFormLibrary: contains code for AthleticFormLibrary project
+    - DataAccess: contains code that allows you to access database
+    - AthleticContext.cs: allows project to access database
+  - Emailer: contains code for sending emails
+    - EmailClient.cs: code for sending emails. In SendMail to send an email replace first.last@gordon.edu with your email and password with your password to send an email from your account. Eventually, we will replace this with the Athletics account but we will not commit the Athletics account username and password to GitHub.
+  - Interfaces: interfaces that some of our classes inherit from
+    - IEmailer.cs: interface that EmailClient.cs inherits from
+    - IReportGeneration.cs: interface that ReportGenerator.cs inherits from
+    - IScheduler.cs: interface that EmailScheduler.cs inherits from
+  - Models: classes for different tables/views in database
+    - Account.cs: stores data for account information
+    - AthleticConflict.cs: stores data about athletic conflicts
+    - AthleticEvent.cs: stores data about athletic events
+    - PlayersInEvent.cs: stores data about which players are in which events
+    - PlayersInTeam.cs: stores data about which players are on which team
+    - SectionMaster.cs: contains course information
+    - StudentsEnrolledIn.cs: contains information about which students are enrolled in which courses
+    - Team.cs: contains information about teams
+  - Static Pages
+    - ReportFormat.html: static html page that serves as a mockup for the report that is sent to the professor
+  - Utilities: files that perform some of the major tasks including generating reports and scheduling times for sending emails
+    - Scheduler: contains code for scheduling emails
+      - EmailScheduler.cs: contains code for scheduling when to send emails. Our reports are sent to the professors every Sunday at 6 AM.
+    - ReportGenerator.cs: contains code for generating reports sent to professors
+  - AthleticFormLibrary.csproj: project file for AthleticFormLibrary project
+  - Injector.cs: registers classes that inherit from interfaces so that these classes can inherit from them
 - Tests: contains unit tests, which are pytests written in Python to test API
-- pytest_components.py: contains code for getting and posting a request through Python
-- test_accounts.py: testing the ability to get account and student enrolled in information
-- test_athleticForm_pytest.py: constants that are used throughout the test project. Currently only contains the host url but may contain more later on.
-- test_emails.py: tests ability to send emails
-- test_events.py: tests ability to get all events
-- test_reports.py: tests to see that report is generating correct information
+  - pytest_components.py: contains code for getting and posting a request through Python
+  - test_accounts.py: testing the ability to get account and student enrolled in information
+  - test_athleticForm_pytest.py: constants that are used throughout the test project. Currently only contains the host url but may contain more later on.
+  - test_emails.py: tests ability to send emails
+  - test_events.py: tests ability to get all events
+  - test_reports.py: tests to see that report is generating correct information
 - AthleticFormSolution.sln: runnable solution file
 - athletic-form-ui: contains code for UI, written in React.js
 - public: contains favicon.ico and index.html
