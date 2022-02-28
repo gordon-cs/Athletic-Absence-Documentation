@@ -3,34 +3,33 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Athletic Absence Documentation</title>
-        <meta name="robots" content="noindex" />
+        <title>File Structure - Athletic Absence Documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
     </head>
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -76,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Purpose.html">Purpose</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="Building/Building.html"><strong aria-hidden="true">1.</strong> Building From Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Building/Frontend.html"><strong aria-hidden="true">1.1.</strong> Frontend</a></li><li class="chapter-item expanded "><a href="Building/Backend.html"><strong aria-hidden="true">1.2.</strong> Backend</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Design</li><li class="chapter-item expanded "><a href="Design/System.html"><strong aria-hidden="true">2.</strong> System</a></li><li class="chapter-item expanded "><a href="Design/Database.html"><strong aria-hidden="true">3.</strong> Database</a></li><li class="chapter-item expanded "><a href="Design/FileStructure.html"><strong aria-hidden="true">4.</strong> File Structure</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../Purpose.html">Purpose</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../Building/Building.html"><strong aria-hidden="true">1.</strong> Building From Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Building/Frontend.html"><strong aria-hidden="true">1.1.</strong> Frontend</a></li><li class="chapter-item expanded "><a href="../Building/Backend.html"><strong aria-hidden="true">1.2.</strong> Backend</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Design</li><li class="chapter-item expanded "><a href="../Design/System.html"><strong aria-hidden="true">2.</strong> System</a></li><li class="chapter-item expanded "><a href="../Design/Database.html"><strong aria-hidden="true">3.</strong> Database</a></li><li class="chapter-item expanded "><a href="../Design/FileStructure.html" class="active"><strong aria-hidden="true">4.</strong> File Structure</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -108,7 +107,7 @@
                     <h1 class="menu-title">Athletic Absence Documentation</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                     </div>
@@ -135,133 +134,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="purpose"><a class="header" href="#purpose">Purpose</a></h1>
-<p>Our customer wants to find a way to use technology to let professors know when student athletes are missing class and help the student athletes stay up to date on their work when they are at a competition. Student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. Our customer's idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process on Gordon 360 by including the course schedule and athletics event schedule and alerting the professors for when they miss class.</p>
-<h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement</a></h1>
-<p>Gordon College Athletics is the athletics program at Gordon College which consists of a large variety of sports. Our customer is excited about working with us on this project. He can keep this project running when we are gone. He may not have the programming skills himself to maintain the project but he has a small budget sufficient enough to pay someone. Other computer science students and CTS work on Gordon 360. The athletics program will be helped significantly if this project succeeds. It will be much easier for athletes to be up to date on their work and for professors to know that they are missing class. However, the athletics department will still be fine if the project fails since the students do have a paper form that they fill out which lets the professor know that they are missing a class.</p>
-<p>The Gordon College Athletics department would like there to be a simpler way to let the professor know that a student is missing class due to an athletic event. Currently, the students have a paper form that they fill out that they have to have the coach sign and they need to deliver this form to the professor. They then have to go to the professor and clarify expectations for the days of class that they are going to miss. The problem with this process is that a mistake might be made, such as the coach not signing the form or the student not clarifying expectations with the professor. This can lead to a student-athlete falling behind in class due to missing class for an athletic competition. our customer’s idea is to use Gordon 360 to have the class schedule and a student’s athletic events schedule and alert a professor if a student misses their class due to an athletic event. our customer thinks that this should send an alert to the professor early on in the semester and 7 days out or 48 hours before the missed class so that the student and the professor could have a conversation about expectations for the class they missed. We know student-athletes, coaches, and professors who would use this product. We are almost certain that we will be able to complete the ideas that our customer wants for this project, probably this semester. There may be additional features that we might want to add to this that have not been thought of yet. We may be able to add some of these features to this project by the time we are finished with the project but there may be some that will not be added until after we graduate.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="running-the-project-api--ui"><a class="header" href="#running-the-project-api--ui">Running the project (API + UI)</a></h1>
-<p>Although there is provided a method to run this project locally, the project is designed to be run on Gordon's servers.</p>
-<hr />
-<h2 id="preliminary-setup"><a class="header" href="#preliminary-setup">Preliminary Setup</a></h2>
-<p>(Work in progress)</p>
-<ul>
-<li>
-<p>Follow instructions for <a href="Building/./Backend.html">API</a> and <a href="Building/./Frontend.html">Frontend</a></p>
-</li>
-<li>
-<p>Run the front-end, making sure the API is runing.</p>
-<ul>
-<li>In the UI directory:
-<ul>
-<li><code>npm install</code></li>
-<li><code>npm start</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="frontend-setup"><a class="header" href="#frontend-setup">Frontend Setup</a></h1>
-<ul>
-<li>Clone the repo</li>
-<li>Make sure the backend is running</li>
-<li><code>cd athletic-form/athletic-form-ui</code></li>
-<li><code>npm install</code></li>
-<li><code>npm start</code></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="backend"><a class="header" href="#backend">Backend</a></h1>
-<h2 id="api-setup"><a class="header" href="#api-setup">API Setup</a></h2>
-<ul>
-<li>
-<p>Connect to the development VM</p>
-<ul>
-<li>Follow instructions <a href="https://cts.gordon.edu/knowledge/how-to-connect-to-a-remote-computer-from-a-non-gordon-managed-windows-computer/">here</a> to connect to it
-<ul>
-<li><code>server name: CS-Athletics</code></li>
-<li><code>domain: gordon.edu</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><code>git clone https://github.com/gordon-cs/athletic-form</code></p>
-</li>
-<li>
-<p><code>cd athletic-form/API</code></p>
-</li>
-<li>
-<p>Open <code>AthleticFormAPI.sln</code> in Visual Studio 2019</p>
-</li>
-</ul>
-<hr />
-<h2 id="backend-with-local-non-gordon-database-vs-code"><a class="header" href="#backend-with-local-non-gordon-database-vs-code">Backend with local non-Gordon Database (VS Code)</a></h2>
-<ul>
-<li>
-<p>First, make sure you have docker-compose installed on your system (follow instructions <a href="https://docs.docker.com/compose/install/">here</a> (make sure to select the correct operating system)</p>
-</li>
-<li>
-<p><code>cd clone-path/API/api-core/AthleticFormCore/AthleticSQLServer/ServerConfiguration</code></p>
-</li>
-<li>
-<p>replace SA_PASSWORD with a password of your choosing (Make sure to use special characters and at least one number)</p>
-</li>
-<li>
-<p>Make sure docker is running. If on docker desktop, make sure you are logged in with your docker account</p>
-</li>
-<li>
-<p><code>sudo docker-compose up</code></p>
-</li>
-<li>
-<p>in Azure Data Studio, add a new connection</p>
-</li>
-<li>
-<p>Server: localhost, username: SA, Password: Password as specified in the docker-compose.yml file</p>
-</li>
-<li>
-<p>Once you are connected, open and run the three queries that are included, first the DatabaseCreation.sql, then the CreateTable.SQL and then the InsertData.SQL query</p>
-</li>
-<li>
-<p>Be sure to leave the server running to connect with the backend in the next step</p>
-</li>
-<li>
-<p>We have since migrated to .NET Core, thus the API can now be run on any OS.</p>
-</li>
-<li>
-<p>Steps are exactly the same as above, however instead of opening the solution in Visual Studo, open one of the two projects in VS code:</p>
-<ul>
-<li>Be sure to have the C# extention (Microsoft) installed</li>
-<li>Specify the project to load (follow instructions <a href="https://code.visualstudio.com/docs/languages/csharp">here</a>, in particular, the section starting with <code>Roslyn and OmniSharp</code>)</li>
-<li>Make sure you have the secrets.json in your <code>~/.microsoft/usersecrets/&lt;user_secrets_id&gt;/secrets.json</code> folder on Unix-like operating systems, and for Windows, <code>%APPDATA%\Microsoft\UserSecrets\&lt;user_secrets_id&gt;\secrets.json</code> (for the &lt;user_secrets_id&gt;, check the <UserSecretsId> field in AthleticFormCore.csproj file)</li>
-<li>In secrets.json, add
-<code>{ &quot;ConnectionString&quot;: &quot;Server=localhost; Database=AthleticDatabase;User Id=sa; Password=your_password }</code></li>
-<li><code>cd repoPath/API/api-core/AthleticFormCore</code></li>
-<li><code>dotnet run</code></li>
-</ul>
-</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="system-overview"><a class="header" href="#system-overview">System Overview</a></h1>
-<p>Prior to the launch of our system, student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. There are also issues where games get canceled, but students skip classes anyways. Carter Shaw’s idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process with our system, maybe using Gordon360 in some way, by including the course schedule and athletics event schedule and alerting the professors for when they will have students missing class. Read more about our problem statement here.
-The primary features of this application include: allowing the person scheduling transport to give that data to a database, providing a 'handshake' system so the software can tell if a student has been approved to miss class by their professor, and allowing this information to be available to coaches, professors, and student-athletes via email and through our UI. Here’s our standard workflow:</p>
-<ul>
-<li>Event gets scheduled</li>
-<li>Bus gets scheduled and added through out UI</li>
-<li>Student IDs are retrieved for all students on the team</li>
-<li>Schedules for each student are checked against departure times</li>
-<li>Emails are sent to the students and the professors of the classes they will be missing</li>
-<li>Conflicts are visible to coaches who are able to monitor that these are resolved</li>
-<li>Any updates or last minute cancellations cause a resend of the emails to any professors that will be affected</li>
-<li>This process continues over the course of each athletic season</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="database"><a class="header" href="#database">Database</a></h1>
-<table><thead><tr><th>Database</th><th>Table</th><th>Content</th><th>Columns</th></tr></thead><tbody>
-<tr><td>WS_GCore</td><td>AthleticEvent</td><td>Contains all athletic events</td><td></td></tr>
-<tr><td>WS_GCore</td><td>InEvent</td><td>Contains a pairing of team and event ids</td><td></td></tr>
-<tr><td>WS_GCore</td><td>InTeam</td><td>Contains a pairing of student ids and teams</td><td></td></tr>
-<tr><td>WS_GCore</td><td>AthleticAbsence.Teams</td><td>Contains all athletic teams.</td><td></td></tr>
-<tr><td>WS_GCore</td><td>View: AthleticAbsence.Conflict</td><td>Maps students who have class conflicts.</td><td></td></tr>
-<tr><td>webSQL</td><td>dbo.account</td><td>Student account info</td><td></td></tr>
-</tbody></table>
-<div style="break-before: page; page-break-before: always;"></div><ul>
+                        <ul>
 <li>API: contains code for API, written in C#, and SQL queries
 <ul>
 <li>api-core: all the code for the API solution
@@ -389,12 +262,18 @@ package.json: similar to package-lock.json, contains information about packages 
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Design/Database.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Design/Database.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
             </nav>
 
         </div>
@@ -402,18 +281,13 @@ package.json: similar to package-lock.json, contains information about packages 
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
     </body>
 </html>
