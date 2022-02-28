@@ -9,4 +9,5 @@ The primary features of this application include: allowing the person scheduling
 - Schedules for each student are checked against departure times
 - Emails are sent to the students and the professors of the classes they will be missing
 - Conflicts are visible to coaches who are able to monitor that these are resolved
-- GO SCOTS!
+- Any updates or last minute cancellations cause a resend of the emails to any professors that will be affected
+- This process continues over the course of each athletic season
