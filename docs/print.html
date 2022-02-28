@@ -173,6 +173,7 @@
 <ul>
 <li>Clone the repo</li>
 <li>Make sure the backend is running</li>
+<li><code>cd athletic-form/athletic-form-ui</code></li>
 <li><code>npm install</code></li>
 <li><code>npm start</code></li>
 </ul>
@@ -256,16 +257,17 @@ The primary features of this application include: allowing the person scheduling
 <li>Schedules for each student are checked against departure times</li>
 <li>Emails are sent to the students and the professors of the classes they will be missing</li>
 <li>Conflicts are visible to coaches who are able to monitor that these are resolved</li>
-<li>GO SCOTS!</li>
+<li>Any updates or last minute cancellations cause a resend of the emails to any professors that will be affected</li>
+<li>This process continues over the course of each athletic season</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="database"><a class="header" href="#database">Database</a></h1>
-<table><thead><tr><th>Database</th><th>Table</th><th>Content</th></tr></thead><tbody>
-<tr><td>WS_GCore</td><td>AthleticEvent</td><td>Contains all athletic events</td></tr>
-<tr><td>WS_GCore</td><td>InEvent</td><td>Contains a pairing of team and event ids</td></tr>
-<tr><td>WS_GCore</td><td>InTeam</td><td>Contains a pairing of student ids and teams</td></tr>
-<tr><td>WS_GCore</td><td>AthleticAbsence.Teams</td><td>Contains all athletic teams.</td></tr>
-<tr><td>WS_GCore</td><td>View: AthleticAbsence.Conflict</td><td>Maps students who have class conflicts.</td></tr>
-<tr><td>webSQL</td><td>dbo.account</td><td>Student account info</td></tr>
+<table><thead><tr><th>Database</th><th>Table</th><th>Content</th><th></th></tr></thead><tbody>
+<tr><td>WS_GCore</td><td>AthleticEvent</td><td>Contains all athletic events</td><td></td></tr>
+<tr><td>WS_GCore</td><td>InEvent</td><td>Contains a pairing of team and event ids</td><td></td></tr>
+<tr><td>WS_GCore</td><td>InTeam</td><td>Contains a pairing of student ids and teams</td><td></td></tr>
+<tr><td>WS_GCore</td><td>AthleticAbsence.Teams</td><td>Contains all athletic teams.</td><td></td></tr>
+<tr><td>WS_GCore</td><td>View: AthleticAbsence.Conflict</td><td>Maps students who have class conflicts.</td><td></td></tr>
+<tr><td>webSQL</td><td>dbo.account</td><td>Student account info</td><td></td></tr>
 </tbody></table>
 
                     </main>
