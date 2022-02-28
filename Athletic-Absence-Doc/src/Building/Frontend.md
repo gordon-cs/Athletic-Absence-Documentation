@@ -1,4 +1,4 @@
-# Frontend
+# Frontend Setup
 
 - Clone the repo
 - Make sure the backend is running

@@ -1,11 +1,18 @@
 # Backend
 
-## Starting the backend
+## API Setup
 
-- Connect to the development VM (Work in progress)
+- Connect to the development VM
+
+  - Follow instructions [here](https://cts.gordon.edu/knowledge/how-to-connect-to-a-remote-computer-from-a-non-gordon-managed-windows-computer/) to connect to it
+    - `server name: CS-Athletics`
+    - `domain: gordon.edu`
+
 - Clone https://github.com/gordon-cs/athletic-form
-- Go to: `athletic-form => API`
+- Go to: `athletic-form/API`
 - Open `AthleticFormAPI.sln` in Visual Studio 2019
+
+---
 
 ## Backend with local non-Gordon Database (VS Code)
 

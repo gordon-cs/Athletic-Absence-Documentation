@@ -148,8 +148,19 @@
 <h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement</a></h1>
 <p>Gordon College Athletics is the athletics program at Gordon College which consists of a large variety of sports. Our customer is excited about working with us on this project. He can keep this project running when we are gone. He may not have the programming skills himself to maintain the project but he has a small budget sufficient enough to pay someone. Other computer science students and CTS work on Gordon 360. The athletics program will be helped significantly if this project succeeds. It will be much easier for athletes to be up to date on their work and for professors to know that they are missing class. However, the athletics department will still be fine if the project fails since the students do have a paper form that they fill out which lets the professor know that they are missing a class.</p>
 <p>The Gordon College Athletics department would like there to be a simpler way to let the professor know that a student is missing class due to an athletic event. Currently, the students have a paper form that they fill out that they have to have the coach sign and they need to deliver this form to the professor. They then have to go to the professor and clarify expectations for the days of class that they are going to miss. The problem with this process is that a mistake might be made, such as the coach not signing the form or the student not clarifying expectations with the professor. This can lead to a student-athlete falling behind in class due to missing class for an athletic competition. our customer’s idea is to use Gordon 360 to have the class schedule and a student’s athletic events schedule and alert a professor if a student misses their class due to an athletic event. our customer thinks that this should send an alert to the professor early on in the semester and 7 days out or 48 hours before the missed class so that the student and the professor could have a conversation about expectations for the class they missed. We know student-athletes, coaches, and professors who would use this product. We are almost certain that we will be able to complete the ideas that our customer wants for this project, probably this semester. There may be additional features that we might want to add to this that have not been thought of yet. We may be able to add some of these features to this project by the time we are finished with the project but there may be some that will not be added until after we graduate.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="building-from-source"><a class="header" href="#building-from-source">Building From Source</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="frontend"><a class="header" href="#frontend">Frontend</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="running-the-project-api--ui"><a class="header" href="#running-the-project-api--ui">Running the project (API + UI)</a></h1>
+<p>Although there is provided a method to run this project locally, the project is designed to be run on Gordon's servers.</p>
+<h2 id="preliminary-setup"><a class="header" href="#preliminary-setup">Preliminary Setup</a></h2>
+<p>(Work in progress)</p>
+<ul>
+<li>
+<p>Follow instructions for <a href="Building/./Backend.html">API</a> and <a href="Building/./Frontend.html">Frontend</a></p>
+</li>
+<li>
+<p>Run the front-end, making sure the API is runing.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frontend-setup"><a class="header" href="#frontend-setup">Frontend Setup</a></h1>
 <ul>
 <li>Clone the repo</li>
 <li>Make sure the backend is running</li>
@@ -157,13 +168,30 @@
 <li><code>npm start</code></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="backend"><a class="header" href="#backend">Backend</a></h1>
-<h2 id="starting-the-backend"><a class="header" href="#starting-the-backend">Starting the backend</a></h2>
+<h2 id="api-setup"><a class="header" href="#api-setup">API Setup</a></h2>
 <ul>
-<li>Connect to the development VM (Work in progress)</li>
-<li>Clone https://github.com/gordon-cs/athletic-form</li>
-<li>Go to: <code>athletic-form =&gt; API</code></li>
-<li>Open <code>AthleticFormAPI.sln</code> in Visual Studio 2019</li>
+<li>
+<p>Connect to the development VM</p>
+<ul>
+<li>Follow instructions <a href="https://cts.gordon.edu/knowledge/how-to-connect-to-a-remote-computer-from-a-non-gordon-managed-windows-computer/">here</a> to connect to it
+<ul>
+<li><code>server name: CS-Athletics</code></li>
+<li><code>domain: gordon.edu</code></li>
 </ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Clone https://github.com/gordon-cs/athletic-form</p>
+</li>
+<li>
+<p>Go to: <code>athletic-form/API</code></p>
+</li>
+<li>
+<p>Open <code>AthleticFormAPI.sln</code> in Visual Studio 2019</p>
+</li>
+</ul>
+<hr />
 <h2 id="backend-with-local-non-gordon-database-vs-code"><a class="header" href="#backend-with-local-non-gordon-database-vs-code">Backend with local non-Gordon Database (VS Code)</a></h2>
 <ul>
 <li>
