@@ -7,6 +7,7 @@
 - [Building From Source](Building/Building.md)
      - [Frontend](Building/Frontend.md)
      - [Backend](Building/Backend.md)
+     - [Testing](Building/Testing.md)
 
 # Design
 
