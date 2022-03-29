@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Athletic Absence Documentation</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Purpose.html">Purpose</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="Building/Building.html"><strong aria-hidden="true">1.</strong> Building From Source</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Building/Frontend.html"><strong aria-hidden="true">1.1.</strong> Frontend</a></li><li class="chapter-item expanded "><a href="Building/Backend.html"><strong aria-hidden="true">1.2.</strong> Backend</a></li><li class="chapter-item expanded "><a href="Building/Testing.html"><strong aria-hidden="true">1.3.</strong> Testing</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Design</li><li class="chapter-item expanded "><a href="Design/System.html"><strong aria-hidden="true">2.</strong> System</a></li><li class="chapter-item expanded "><a href="Design/Database.html"><strong aria-hidden="true">3.</strong> Database</a></li><li class="chapter-item expanded "><a href="Design/FileStructure.html"><strong aria-hidden="true">4.</strong> File Structure</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Athletic Absence Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="purpose"><a class="header" href="#purpose">Purpose</a></h1>
+<p>Our customer wants to find a way to use technology to let professors know when student athletes are missing class and help the student athletes stay up to date on their work when they are at a competition. Student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. Our customer's idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process on Gordon 360 by including the course schedule and athletics event schedule and alerting the professors for when they miss class.</p>
+<h1 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement</a></h1>
+<p>Gordon College Athletics is the athletics program at Gordon College which consists of a large variety of sports. Our customer is excited about working with us on this project. He can keep this project running when we are gone. He may not have the programming skills himself to maintain the project but he has a small budget sufficient enough to pay someone. Other computer science students and CTS work on Gordon 360. The athletics program will be helped significantly if this project succeeds. It will be much easier for athletes to be up to date on their work and for professors to know that they are missing class. However, the athletics department will still be fine if the project fails since the students do have a paper form that they fill out which lets the professor know that they are missing a class.</p>
+<p>The Gordon College Athletics department would like there to be a simpler way to let the professor know that a student is missing class due to an athletic event. Currently, the students have a paper form that they fill out that they have to have the coach sign and they need to deliver this form to the professor. They then have to go to the professor and clarify expectations for the days of class that they are going to miss. The problem with this process is that a mistake might be made, such as the coach not signing the form or the student not clarifying expectations with the professor. This can lead to a student-athlete falling behind in class due to missing class for an athletic competition. our customer’s idea is to use Gordon 360 to have the class schedule and a student’s athletic events schedule and alert a professor if a student misses their class due to an athletic event. our customer thinks that this should send an alert to the professor early on in the semester and 7 days out or 48 hours before the missed class so that the student and the professor could have a conversation about expectations for the class they missed. We know student-athletes, coaches, and professors who would use this product. We are almost certain that we will be able to complete the ideas that our customer wants for this project, probably this semester. There may be additional features that we might want to add to this that have not been thought of yet. We may be able to add some of these features to this project by the time we are finished with the project but there may be some that will not be added until after we graduate.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="running-the-project-api--ui"><a class="header" href="#running-the-project-api--ui">Running the project (API + UI)</a></h1>
+<p>Although there is provided a method to run this project locally, the project is designed to be run on Gordon's servers.</p>
+<hr />
+<h2 id="preliminary-setup"><a class="header" href="#preliminary-setup">Preliminary Setup</a></h2>
+<p>(Work in progress)</p>
+<ul>
+<li>
+<p>Follow instructions for <a href="Building/./Backend.html">API</a> and <a href="Building/./Frontend.html">Frontend</a></p>
+</li>
+<li>
+<p>Run the front-end, making sure the API is runing.</p>
+<ul>
+<li>In the UI directory:
+<ul>
+<li><code>npm install</code></li>
+<li><code>npm start</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frontend-setup"><a class="header" href="#frontend-setup">Frontend Setup</a></h1>
+<ul>
+<li>Clone the repo</li>
+<li>Make sure the backend is running</li>
+<li><code>cd athletic-form/athletic-form-ui</code></li>
+<li><code>npm install</code></li>
+<li><code>npm start</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="backend"><a class="header" href="#backend">Backend</a></h1>
+<h2 id="api-setup"><a class="header" href="#api-setup">API Setup</a></h2>
+<ul>
+<li>
+<p>Connect to the development VM</p>
+<ul>
+<li>Make sure you have Multifactor Authentication setup <a href="https://cts.gordon.edu/knowledge/setupmfa/">here</a></li>
+<li>Follow instructions <a href="https://cts.gordon.edu/knowledge/how-to-connect-to-a-remote-computer-from-a-non-gordon-managed-windows-computer/">here</a> to connect to it
+<ul>
+<li><code>server name: CS-Athletics</code></li>
+<li><code>domain: gordon.edu</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>git clone https://github.com/gordon-cs/athletic-form</code></p>
+</li>
+<li>
+<p><code>cd athletic-form/API</code></p>
+</li>
+<li>
+<p>Open <code>AthleticFormAPI.sln</code> in Visual Studio 2019</p>
+</li>
+</ul>
+<hr />
+<h2 id="backend-with-local-non-gordon-database-vs-code"><a class="header" href="#backend-with-local-non-gordon-database-vs-code">Backend with local non-Gordon Database (VS Code)</a></h2>
+<ul>
+<li>
+<p>First, make sure you have docker-compose installed on your system (follow instructions <a href="https://docs.docker.com/compose/install/">here</a> (make sure to select the correct operating system)</p>
+</li>
+<li>
+<p><code>cd clone-path/API/api-core/AthleticFormCore/AthleticSQLServer/ServerConfiguration</code></p>
+</li>
+<li>
+<p>replace SA_PASSWORD with a password of your choosing (Make sure to use special characters and at least one number)</p>
+</li>
+<li>
+<p>Make sure docker is running. If on docker desktop, make sure you are logged in with your docker account</p>
+</li>
+<li>
+<p><code>sudo docker-compose up</code></p>
+</li>
+<li>
+<p>in Azure Data Studio, add a new connection</p>
+</li>
+<li>
+<p>Server: localhost, username: SA, Password: Password as specified in the docker-compose.yml file</p>
+</li>
+<li>
+<p>Once you are connected, open and run the three queries that are included, first the DatabaseCreation.sql, then the CreateTable.SQL and then the InsertData.SQL query</p>
+</li>
+<li>
+<p>Be sure to leave the server running to connect with the backend in the next step</p>
+</li>
+<li>
+<p>We have since migrated to .NET Core, thus the API can now be run on any OS.</p>
+</li>
+<li>
+<p>Steps are exactly the same as above, however instead of opening the solution in Visual Studo, open one of the two projects in VS code:</p>
+<ul>
+<li>Be sure to have the C# extention (Microsoft) installed</li>
+<li>Specify the project to load (follow instructions <a href="https://code.visualstudio.com/docs/languages/csharp">here</a>, in particular, the section starting with <code>Roslyn and OmniSharp</code>)</li>
+<li>Make sure you have the secrets.json in your <code>~/.microsoft/usersecrets/&lt;user_secrets_id&gt;/secrets.json</code> folder on Unix-like operating systems, and for Windows, <code>%APPDATA%\Microsoft\UserSecrets\&lt;user_secrets_id&gt;\secrets.json</code> (for the &lt;user_secrets_id&gt;, check the <UserSecretsId> field in AthleticFormCore.csproj file)</li>
+<li>In secrets.json, add
+<code>{ &quot;ConnectionString&quot;: &quot;Server=localhost; Database=AthleticDatabase;User Id=sa; Password=your_password }</code></li>
+<li><code>cd repoPath/API/api-core/AthleticFormCore</code></li>
+<li><code>dotnet run</code></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<h2 id="running-tests"><a class="header" href="#running-tests">Running Tests</a></h2>
+<ul>
+<li>Make sure the backend is running before running your unit tests.</li>
+<li>Open up a new terminal window and <code>cd repoPath/API/api-core/Tests</code></li>
+<li>Make sure python is installed if not install it <a href="https://www.python.org/downloads/">here</a></li>
+<li>To install pytest, run <code>pip install pytest</code> or <code>python -m pip install pytest</code> or <code>py -m pip install pytest</code>.</li>
+<li>Change the from_email and username in EmailClient.cs to your Gordon email and the password to your Gordon password.</li>
+<li>To run the tests, run <code>pytest</code> or <code>python -m pytest</code> or <code>py -m pytest</code></li>
+<li>If you get an SSLError when running the tests, comment out line 7 in pytest_components.py where it says <code>return requests.get(fullUrl)</code> and uncomment line 9 where it says <code>return requests.get(fullUrl, verify=False)</code> and run the tests again</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="system-overview"><a class="header" href="#system-overview">System Overview</a></h1>
+<p>Prior to the launch of our system, student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. There are also issues where games get canceled, but students skip classes anyways. Carter Shaw’s idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process with our system, maybe using Gordon360 in some way, by including the course schedule and athletics event schedule and alerting the professors for when they will have students missing class. Read more about our problem statement here.
+The primary features of this application include: allowing the person scheduling transport to give that data to a database, providing a 'handshake' system so the software can tell if a student has been approved to miss class by their professor, and allowing this information to be available to coaches, professors, and student-athletes via email and through our UI. Here’s our standard workflow:</p>
+<ul>
+<li>Event gets scheduled</li>
+<li>Bus gets scheduled and added through out UI</li>
+<li>Student IDs are retrieved for all students on the team</li>
+<li>Schedules for each student are checked against departure times</li>
+<li>Emails are sent to the students and the professors of the classes they will be missing</li>
+<li>Conflicts are visible to coaches who are able to monitor that these are resolved</li>
+<li>Any updates or last minute cancellations cause a resend of the emails to any professors that will be affected</li>
+<li>This process continues over the course of each athletic season</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="database"><a class="header" href="#database">Database</a></h1>
+<table><thead><tr><th>Database</th><th>Table</th><th>Content</th><th>Columns</th></tr></thead><tbody>
+<tr><td>WS_GCore</td><td>AthleticEvent</td><td>Contains all athletic events</td><td></td></tr>
+<tr><td>WS_GCore</td><td>InEvent</td><td>Contains a pairing of team and event ids</td><td></td></tr>
+<tr><td>WS_GCore</td><td>InTeam</td><td>Contains a pairing of student ids and teams</td><td></td></tr>
+<tr><td>WS_GCore</td><td>AthleticAbsence.Teams</td><td>Contains all athletic teams.</td><td></td></tr>
+<tr><td>WS_GCore</td><td>View: AthleticAbsence.Conflict</td><td>Maps students who have class conflicts.</td><td></td></tr>
+<tr><td>webSQL</td><td>dbo.account</td><td>Student account info</td><td></td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>API: contains code for API, written in C#, and SQL queries
+<ul>
+<li>api-core: all the code for the API solution
+<ul>
+<li>AthleticFormCore: contains code for AthleticFormCore project</li>
+<li>AthleticSQLServer: contains code for our mock-database
+<ul>
+<li>SQL Queries: SQL queries for setting up non-Gordon database
+<ul>
+<li>CreateConflictsView.sql: Creates Conflicts view</li>
+<li>CreateTable.sql: Creates tables in database</li>
+<li>DatabaseCreation.sql: Creates database</li>
+<li>DropConflictsView.sql: Drops Conflicts view</li>
+<li>DropEnrolledIn.sql: Drops StudentEnrolledIn view</li>
+<li>DropTables.sql: Drops tables in database</li>
+<li>InsertData.sql: Inserts data into database</li>
+<li>TestInsert.sql: Another file that inserts one row into the InEvent table</li>
+</ul>
+</li>
+<li>(Deprecated, at this point) ServerConfiguration: contains code for setting up docker container for non-Gordon database
+<ul>
+<li>.prettierignore</li>
+<li>Docker-compose.yml: YAML file for setting up container for non-Gordon database. Now that we have access to the Gordon database, this won’t be used.</li>
+</ul>
+</li>
+<li>.prettierc.json</li>
+</ul>
+</li>
+<li>Controllers: controllers for the project, gather data together, performs logic for data, the controllers control the way that the user interacts with the data (see “API Endpoints” below for more details)
+<ul>
+<li>AccountsController.cs: controller for displaying account information and all students with their current enrollment schedule</li>
+<li>ConflictsController.cs: controller for conflicts information</li>
+<li>EmailController.cs: controller with code for displaying email information and sending emails</li>
+<li>EventsController.cs: controller for reading, adding, deleting, and restoring events</li>
+<li>ReportsController.cs: controller for reading report sent to professors</li>
+</ul>
+</li>
+<li>AthleticFormCore.csproj: project file for AthleticFormCore project</li>
+<li>Program.cs: actual program that is run</li>
+<li>Startup.cs: code for starting up project</li>
+</ul>
+</li>
+<li>AthleticFormLibrary: contains code for AthleticFormLibrary project
+<ul>
+<li>DataAccess: contains code that allows you to access database</li>
+<li>AthleticContext.cs: allows project to access database</li>
+</ul>
+</li>
+<li>Emailer: contains code for sending emails
+<ul>
+<li>EmailClient.cs: code for sending emails. In SendMail to send an email replace first.last@gordon.edu with your email and password with your password to send an email from your account. Eventually, we will replace this with the Athletics account but we will not commit the Athletics account username and password to GitHub.</li>
+</ul>
+</li>
+<li>Interfaces: interfaces that some of our classes inherit from
+<ul>
+<li>IEmailer.cs: interface that EmailClient.cs inherits from</li>
+<li>IReportGeneration.cs: interface that ReportGenerator.cs inherits from</li>
+<li>IScheduler.cs: interface that EmailScheduler.cs inherits from</li>
+</ul>
+</li>
+<li>Models: classes for different tables/views in database
+<ul>
+<li>Account.cs: stores data for account information</li>
+<li>AthleticConflict.cs: stores data about athletic conflicts</li>
+<li>AthleticEvent.cs: stores data about athletic events</li>
+<li>PlayersInEvent.cs: stores data about which players are in which events</li>
+<li>PlayersInTeam.cs: stores data about which players are on which team</li>
+<li>SectionMaster.cs: contains course information</li>
+<li>StudentsEnrolledIn.cs: contains information about which students are enrolled in which courses</li>
+<li>Team.cs: contains information about teams</li>
+</ul>
+</li>
+<li>Static Pages
+<ul>
+<li>ReportFormat.html: static html page that serves as a mockup for the report that is sent to the professor</li>
+</ul>
+</li>
+<li>Utilities: files that perform some of the major tasks including generating reports and scheduling times for sending emails
+<ul>
+<li>Scheduler: contains code for scheduling emails
+<ul>
+<li>EmailScheduler.cs: contains code for scheduling when to send emails. Our reports are sent to the professors every Sunday at 6 AM.</li>
+</ul>
+</li>
+<li>ReportGenerator.cs: contains code for generating reports sent to professors</li>
+</ul>
+</li>
+<li>AthleticFormLibrary.csproj: project file for AthleticFormLibrary project</li>
+<li>Injector.cs: registers classes that inherit from interfaces so that these classes can inherit from them</li>
+</ul>
+</li>
+<li>Tests: contains unit tests, which are pytests written in Python to test API
+<ul>
+<li>pytest_components.py: contains code for getting and posting a request through Python</li>
+<li>test_accounts.py: testing the ability to get account and student enrolled in information</li>
+<li>test_athleticForm_pytest.py: constants that are used throughout the test project. Currently only contains the host url but may contain more later on.</li>
+<li>test_emails.py: tests ability to send emails</li>
+<li>test_events.py: tests ability to get all events</li>
+<li>test_reports.py: tests to see that report is generating correct information</li>
+</ul>
+</li>
+<li>AthleticFormSolution.sln: runnable solution file</li>
+<li>athletic-form-ui: contains code for UI, written in React.js</li>
+<li>public: contains favicon.ico and index.html</li>
+<li>favicon.ico: Gordon Athletics logo. Our main logo for the project</li>
+<li>index.html: html page that renders react component.</li>
+<li>src: contains source code for project</li>
+<li>Components: contains components that are commonly used throughout the project</li>
+<li>CoachEventCard.tsx: cards on coach’s events page</li>
+<li>DeletedEventCard.tsx: cards on deleted events page</li>
+<li>EventCard.tsx: cards on Robyn’s events page</li>
+<li>EventDetailsBase.tsx: component that is shared between Robyn’s details page and the coach’s details page</li>
+<li>Helpers: contains TypeScript files with functions that are commonly used as helper functions throughout the project</li>
+<li>DateTimeHelpers.ts: these functions make it so that the date and time are easy for people to read and a function converting military time to standard time.</li>
+<li>FilterHelpers.tsx: these functions help with sorting and filtering events</li>
+<li>Services: do controller requests in React project and connect backend to frontend</li>
+<li>AxiosService.ts: fetches the base backend url</li>
+<li>EventService.ts: contains functions that do controller actions in React project</li>
+<li>Views: different React pages</li>
+<li>AddEvent.tsx: page for adding events</li>
+<li>ClassConflicts.tsx: displays class conflicts for an athlete in an athletic event</li>
+<li>CoachEventDetails.tsx: displays event details for the coach. Displays information about an athletic event, which students have conflicts and their approval status.</li>
+<li>CoachEventsPage.tsx: displays all non-deleted events for coaches. Displays event information for each event. Red stripes on top for if the events have conflicts. Also, displays the number of students with conflicts for each event.</li>
+<li>DeleteEvent.tsx: page for deleting an athletic event</li>
+<li>DeletedEventsPage.tsx: page that displays all deleted events. These events can be recovered.</li>
+<li>EventDetails.tsx: displays event details for Robyn. Simply displays data about events.</li>
+<li>EventsPage.tsx: displays all non-deleted events for Robyn. Displays event information for each event. Robyn also has the ability to add, edit, and delete events.</li>
+<li>RecoverEvent.tsx: page for recovering a deleted event.</li>
+<li>UpdateEvent.tsx: page for updating an event.</li>
+<li>styles: scss styling for React pages</li>
+<li>addEvent.scss: styling for AddEvent.tsx</li>
+<li>eventCard.scss: styling for EventCard.tsx and CoachEventCard.tsx</li>
+<li>eventsPage.scss: styling for EventsPage.tsx and CoachEventsPage.tsx</li>
+<li>App.tsx: renders React page</li>
+<li>index.tsx: renders App.tsx</li>
+<li>react-app-env-d.ts</li>
+<li>.editorconfig</li>
+<li>.prettierc.json</li>
+<li>package-lock.json: contains exact dependency tree for packages in athletic-form-ui directory</li>
+<li>package.json: similar to package-lock.json, contains information about packages in athletic-form-ui directory but not exact dependency tree</li>
+<li>tsconfig.json</li>
+<li>.gitignore: list of files for GitHub to ignore</li>
+<li>README.md: contains documentation for project</li>
+<li>package-lock.json: contains exact dependency tree for packages in athletic-form directory</li>
+<li>package.json: similar to package-lock.json, contains information about packages in athletic-form directory but not exact dependency tree</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
