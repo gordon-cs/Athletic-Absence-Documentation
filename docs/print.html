@@ -444,6 +444,54 @@ The primary features of this application include: allowing the person scheduling
 <ul>
 <li>Sends an email to {email}, leave {number} = 0 for default message</li>
 </ul>
+<p>api/EventsController</p>
+<ul>
+<li>Return all our Athletic Events as a list</li>
+</ul>
+<p>api/EventsController/add</p>
+<ul>
+<li>Posts a new event to our database and adds all necessary players to it</li>
+</ul>
+<p>api/EventsController/update/{id}</p>
+<ul>
+<li>Modifies the event with id = {id}</li>
+</ul>
+<p>api/EventsController/delete/{id}</p>
+<ul>
+<li>Puts the event with id = {id} into the recycle bin</li>
+</ul>
+<p>api/EventsController/restore/{id}</p>
+<ul>
+<li>Removes the event with id = {id} from the recycle bin and back into the main events pool</li>
+</ul>
+<p>api/ReportsController/{number}</p>
+<ul>
+<li>Generates a report, leave {number} = 0 for default</li>
+</ul>
+<p>api/TeamsController</p>
+<ul>
+<li>Gets all teams in the database</li>
+</ul>
+<p>api/TeamsController/{sport}</p>
+<ul>
+<li>Gets the roster for the team denoted by {sport}</li>
+</ul>
+<p>api/TeamsController/add</p>
+<ul>
+<li>Adds new players to team rosters</li>
+</ul>
+<p>api/TeamsController/{sport}/delete/{gordonId}</p>
+<ul>
+<li>Removes player with id = {gordonId} from team denoted by {sport}</li>
+</ul>
+<p>api/YearTermController/year/{date}</p>
+<ul>
+<li>Gets the year from {date}</li>
+</ul>
+<p>api/YearTermController/term/{date}</p>
+<ul>
+<li>Gets the term from {date}</li>
+</ul>
 
                     </main>
 
