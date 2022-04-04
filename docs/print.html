@@ -247,9 +247,9 @@
 <li>Open up a new terminal window and <code>cd repoPath/API/api-core/Tests</code></li>
 <li>Make sure python is installed if not install it <a href="https://www.python.org/downloads/">here</a></li>
 <li>To install pytest, run <code>pip install pytest</code> or <code>python -m pip install pytest</code> or <code>py -m pip install pytest</code>.</li>
-<li>Change the from_email and username in EmailClient.cs are set to your Gordon email and the password to your Gordon password.</li>
+<li>Change the from_email and username in EmailClient.cs to your Gordon email and the password to your Gordon password.</li>
 <li>To run the tests, run <code>pytest</code> or <code>python -m pytest</code> or <code>py -m pytest</code></li>
-<li>If you get an SSLError when running the tests, comment out line 7 in pytest_components.py where it says <code>return requests.get(fullUrl)</code> and remove the comment in line 9 where it says <code>return requests.get(fullUrl, verify=False)</code> and run the tests again</li>
+<li>If you get an SSLError when running the tests, comment out line 7 in pytest_components.py where it says <code>return requests.get(fullUrl)</code> and uncomment line 9 where it says <code>return requests.get(fullUrl, verify=False)</code> and run the tests again</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="system-overview"><a class="header" href="#system-overview">System Overview</a></h1>
 <p>Prior to the launch of our system, student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. There are also issues where games get canceled, but students skip classes anyways. Carter Shaw’s idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process with our system, maybe using Gordon360 in some way, by including the course schedule and athletics event schedule and alerting the professors for when they will have students missing class. Read more about our problem statement here.
