@@ -8,4 +8,4 @@ Follow [these](https://rust-lang.github.io/mdBook/guide/installation.html) instr
 - Clone this repo
 - cd into Athletic-Form-Docs
 - Make changs in the source
-- run `mdbook build -d ../docs
+- run `mdbook build -d ../docs`
