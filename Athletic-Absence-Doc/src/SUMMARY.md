@@ -16,3 +16,4 @@
   - [System](Design/System.md)
   - [Database](Design/Database.md)
   - [File Structure](Design/FileStructure.md)
+  - [API Endpoints](Design/APIEndpoints.md)
