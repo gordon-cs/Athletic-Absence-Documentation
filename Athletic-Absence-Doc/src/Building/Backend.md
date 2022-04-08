@@ -2,12 +2,7 @@
 
 ## API Setup
 
-- Connect to the development VM
-
-  - Make sure you have Multifactor Authentication setup [here](https://cts.gordon.edu/knowledge/setupmfa/)
-  - Follow instructions [here](https://cts.gordon.edu/knowledge/how-to-connect-to-a-remote-computer-from-a-non-gordon-managed-windows-computer/) to connect to it
-    - `server name: CS-Athletics`
-    - `domain: gordon.edu`
+- [Connect to the development VM](./ConnectingToVM.md)
 
 - `git clone https://github.com/gordon-cs/athletic-form`
 - `cd athletic-form/API`
