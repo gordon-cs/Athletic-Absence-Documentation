@@ -9,6 +9,6 @@ The primary features of this application include: allowing the person scheduling
 - Student IDs are retrieved for all students on the team
 - Schedules for each student are checked against departure times
 - Emails are sent to the students and the professors of the classes they will be missing
-- Conflicts are visible to coaches who are able to monitor that these are resolved
+- Conflicts are visible to coaches who are able to monitor that these are resolved.  We are still working on how to monitor that these conflicts are resolved.  What we are thinking is having an approval status for each student and once the students have their conversations with the professors about their expectations for missed class, they will be marked as approved.
 - Any updates or last minute cancellations cause a resend of the emails to any professors that will be affected
 - This process continues over the course of each athletic season
