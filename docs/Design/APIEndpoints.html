@@ -134,71 +134,71 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>api/AccountsController/StudentsEnrolledIn/{email}/{yearCode}/{termCode}</p>
+                        <p>api/Accounts/StudentsEnrolledIn/{email}/{yearCode}/{termCode}</p>
 <ul>
 <li>Gets students enrolled in a class by parameter</li>
 </ul>
-<p>api/AccountsController/email</p>
+<p>api/Accounts/{email}</p>
 <ul>
 <li>Gets account by email</li>
 </ul>
-<p>api/ConflictsController</p>
+<p>api/Conflicts</p>
 <ul>
 <li>Gets all students with conflicts</li>
 </ul>
-<p>api/ConflictsController/{eventId}</p>
+<p>api/Conflicts/{eventId}</p>
 <ul>
 <li>Gets all students with conflicts for an event with id = {eventId}</li>
 </ul>
-<p>api/EmailController/{fromEmail}/{password}/{emails}/{number}</p>
+<p>api/Email/{fromEmail}/{password}/{emails}/{number}</p>
 <ul>
 <li>Post request that sends an email to {emails} from {fromEmail} and {password}, leave {number} = 0 for default message called in test_sendEmail() in test_emails.py to check to be sure that mailer is working.  When running this test, replace the fromEmail and password with your Gordon email and password.</li>
 </ul>
-<p>api/EventsController</p>
+<p>api/Events</p>
 <ul>
-<li>Return all our Athletic Events as a list</li>
+<li>Return all our Athletic Events as a list.</li>
 </ul>
-<p>api/EventsController/add</p>
+<p>api/Events/add</p>
 <ul>
 <li>Posts a new event to our database and adds all necessary players to it</li>
 </ul>
-<p>api/EventsController/update/{id}</p>
+<p>api/Events/update/{id}</p>
 <ul>
 <li>Modifies the event with id = {id}</li>
 </ul>
-<p>api/EventsController/delete/{id}</p>
+<p>api/Events/delete/{id}</p>
 <ul>
 <li>Puts the event with id = {id} into the recycle bin</li>
 </ul>
-<p>api/EventsController/restore/{id}</p>
+<p>api/Events/restore/{id}</p>
 <ul>
 <li>Removes the event with id = {id} from the recycle bin and back into the main events pool</li>
 </ul>
-<p>api/ReportsController/{number}</p>
+<p>api/Reports/{number}</p>
 <ul>
 <li>Generates a report, leave {number} = 0 for default</li>
 </ul>
-<p>api/TeamsController</p>
+<p>api/Teams</p>
 <ul>
 <li>Gets all teams in the database</li>
 </ul>
-<p>api/TeamsController/{sport}</p>
+<p>api/Teams/{sport}</p>
 <ul>
 <li>Gets the roster for the team denoted by {sport}</li>
 </ul>
-<p>api/TeamsController/add</p>
+<p>api/Teams/add</p>
 <ul>
 <li>Adds new players to team rosters</li>
 </ul>
-<p>api/TeamsController/{sport}/delete/{gordonId}</p>
+<p>api/Teams/{sport}/delete/{gordonId}</p>
 <ul>
 <li>Removes player with id = {gordonId} from team denoted by {sport}</li>
 </ul>
-<p>api/YearTermController/year/{date}</p>
+<p>api/YearTerm/year/{date}</p>
 <ul>
 <li>Gets the year from {date}</li>
 </ul>
-<p>api/YearTermController/term/{date}</p>
+<p>api/YearTerm/term/{date}</p>
 <ul>
 <li>Gets the term from {date}</li>
 </ul>
