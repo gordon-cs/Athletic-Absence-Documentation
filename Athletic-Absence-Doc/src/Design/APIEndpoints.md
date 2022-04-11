@@ -1,6 +1,3 @@
-api/AccountsController/
- - Gets all accounts of students within Athletics
-
 api/AccountsController/StudentsEnrolledIn/{email}/{yearCode}/{termCode}
  - Gets students enrolled in a class by parameter
 
