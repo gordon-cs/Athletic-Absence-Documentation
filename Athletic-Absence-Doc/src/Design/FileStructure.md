@@ -46,7 +46,7 @@
     - ReportFormat.html: static html page that serves as a mockup for the report that is sent to the professor
   - Utilities: files that perform some of the major tasks including generating reports and scheduling times for sending emails
     - Scheduler: contains code for scheduling emails
-      - EmailScheduler.cs: contains code for scheduling when to send emails. Our reports are sent to the professors every Sunday at 6 AM.
+      - EmailScheduler.cs: contains code for scheduling when to send emails. Our reports are sent to the professors every Sunday at 6 AM.  The idea is that as soon as an event is added, the professor will get emails about class conflicts for the event.  That way, the professor will receive emails way ahead of time about an event and they won't have to talk about expectations with their students about how to catch up on their work at the last minute.
     - ReportGenerator.cs: contains code for generating reports sent to professors
   - AthleticFormLibrary.csproj: project file for AthleticFormLibrary project
   - Injector.cs: registers classes that inherit from interfaces so that these classes can inherit from them
