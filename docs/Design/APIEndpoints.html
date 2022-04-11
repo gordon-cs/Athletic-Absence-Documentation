@@ -154,9 +154,9 @@
 <ul>
 <li>Gets all students with conflicts for an event with id = {eventId}</li>
 </ul>
-<p>api/EmailController/{emails}/{number}</p>
+<p>api/EmailController/{fromEmail}/{password}/{emails}/{number}</p>
 <ul>
-<li>Sends an email to {email}, leave {number} = 0 for default message</li>
+<li>Post request that sends an email to {emails} from {fromEmail} and {password}, leave {number} = 0 for default message called in test_sendEmail() in test_emails.py to check to be sure that mailer is working.  When running this test, replace the fromEmail and password with your Gordon email and password.</li>
 </ul>
 <p>api/EventsController</p>
 <ul>

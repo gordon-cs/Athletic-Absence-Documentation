@@ -13,8 +13,8 @@ api/ConflictsController
 api/ConflictsController/{eventId}
  - Gets all students with conflicts for an event with id = {eventId}
 
-api/EmailController/{emails}/{number}
- - Sends an email to {email}, leave {number} = 0 for default message
+api/EmailController/{fromEmail}/{password}/{emails}/{number}
+ - Post request that sends an email to {emails} from {fromEmail} and {password}, leave {number} = 0 for default message called in test_sendEmail() in test_emails.py to check to be sure that mailer is working.  When running this test, replace the fromEmail and password with your Gordon email and password.
 
 api/EventsController
  - Return all our Athletic Events as a list

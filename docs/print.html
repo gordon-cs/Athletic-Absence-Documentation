@@ -274,9 +274,9 @@ Visual Studio should build the project to the selected path</li>
 <li>Open up a new terminal window and <code>cd repoPath/API/api-core/Tests</code></li>
 <li>Make sure python is installed if not install it <a href="https://www.python.org/downloads/">here</a></li>
 <li>To install pytest, run <code>pip install pytest</code> or <code>python -m pip install pytest</code> or <code>py -m pip install pytest</code>.</li>
-<li>Change the from_email and username in EmailClient.cs to your Gordon email and the password to your Gordon password.</li>
+<li>Change the fromEmail in test_emails.py to your Gordon email and the password to your Gordon password.</li>
 <li>To run the tests, run <code>pytest</code> or <code>python -m pytest</code> or <code>py -m pytest</code></li>
-<li>If you get an SSLError when running the tests, comment out line 7 in pytest_components.py where it says <code>return requests.get(fullUrl)</code> and uncomment line 9 where it says <code>return requests.get(fullUrl, verify=False)</code> and run the tests again</li>
+<li>If you get an SSLError when running the tests, comment out line 7 in pytest_components.py where it says <code>return requests.get(fullUrl)</code> and line 13 where it says <code>return requests.post(fullUrl, data = data, headers = {'Content-Type': 'application/json'})</code> and uncomment line 9 where it says <code>return requests.get(fullUrl, verify=False)</code> and line 15 where it says <code>return requests.post(fullUrl, data = data, headers = {'Content-Type': 'application/json'}, verify=False)</code> and run the tests again</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="system-overview"><a class="header" href="#system-overview">System Overview</a></h1>
 <p>Prior to the launch of our system, student athletes have to fill out a form for when they have to miss class for an athletic competition, have their coach sign it, and deliver it to their professor. The professors then need to clarify what the expectations are for the days that the students are missing class. The problem with this is that students often make a mistake with this paper form such as not having the coach sign it or not following up with the professor. There are also issues where games get canceled, but students skip classes anyways. Carter Shaw’s idea is that instead of having to fill out a paper form that is prone to mistakes, we should automate the process with our system, maybe using Gordon360 in some way, by including the course schedule and athletics event schedule and alerting the professors for when they will have students missing class. Read more about our problem statement <a href="https://docs.google.com/document/d/1WDIsoW0Kt1ZyuIqRdbD_QvH8wQZq6wyaRMwcDqkzhNE/edit?usp=sharing">here</a>.</p>
@@ -467,9 +467,9 @@ Visual Studio should build the project to the selected path</li>
 <ul>
 <li>Gets all students with conflicts for an event with id = {eventId}</li>
 </ul>
-<p>api/EmailController/{emails}/{number}</p>
+<p>api/EmailController/{fromEmail}/{password}/{emails}/{number}</p>
 <ul>
-<li>Sends an email to {email}, leave {number} = 0 for default message</li>
+<li>Post request that sends an email to {emails} from {fromEmail} and {password}, leave {number} = 0 for default message called in test_sendEmail() in test_emails.py to check to be sure that mailer is working.  When running this test, replace the fromEmail and password with your Gordon email and password.</li>
 </ul>
 <p>api/EventsController</p>
 <ul>
