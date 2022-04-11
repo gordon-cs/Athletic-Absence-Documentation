@@ -29,6 +29,8 @@
     - AthleticContext.cs: allows project to access database
   - Emailer: contains code for sending emails
     - EmailClient.cs: code for sending emails. In SendMail to send an email replace first.last@gordon.edu with your email and password with your password to send an email from your account. Eventually, we will replace this with the Athletics account but we will not commit the Athletics account username and password to GitHub.
+  -ExcelImporter
+    - ExcelReader.cs: Reads in an excel document of a specific format, and attempts to create new events or update old ones based on the new complete or partial information.
   - Interfaces: interfaces that some of our classes inherit from
     - IEmailer.cs: interface that EmailClient.cs inherits from
     - IReportGeneration.cs: interface that ReportGenerator.cs inherits from
