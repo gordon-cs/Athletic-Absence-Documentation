@@ -14,7 +14,7 @@ api/Email/{fromEmail}/{password}/{emails}/{number}
  - Post request that sends an email to {emails} from {fromEmail} and {password}, leave {number} = 0 for default message called in test_sendEmail() in test_emails.py to check to be sure that mailer is working.  When running this test, replace the fromEmail and password with your Gordon email and password.
 
 api/Events
- - Return all our Athletic Events as a list.
+ - Return all our Athletic Events as a list.  This method is used in CoachEventDetails, CoachEventsPage, DeletedEventsPage, EventDetails, and EventsPage.  In these different files, we filter from the list.  In CoachEventDetails and EventDetails, we find an event by a given event id and show details about that event.  In CoachEventsPage and EventsPage, we filter all the events that are not marked as deleted and show all these events. In DeletedEventsPage, we filter all the events that are marked as deleted and show all these events.
 
 api/Events/add
  - Posts a new event to our database and adds all necessary players to it

@@ -471,7 +471,7 @@ Visual Studio should build the project to the selected path</li>
 </ul>
 <p>api/Events</p>
 <ul>
-<li>Return all our Athletic Events as a list.</li>
+<li>Return all our Athletic Events as a list.  This method is used in CoachEventDetails, CoachEventsPage, DeletedEventsPage, EventDetails, and EventsPage.  In these different files, we filter from the list.  In CoachEventDetails and EventDetails, we find an event by a given event id and show details about that event.  In CoachEventsPage and EventsPage, we filter all the events that are not marked as deleted and show all these events. In DeletedEventsPage, we filter all the events that are marked as deleted and show all these events.</li>
 </ul>
 <p>api/Events/add</p>
 <ul>
